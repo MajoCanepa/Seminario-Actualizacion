@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Seminario de Actualización</h1>
+
+    <input id='inputTexto' type="texto"</input>
+    <button onclick="ejecutar()">Check</button> <br><br>
+    
+    <label id="idtexto" style="display: none; color: red; background-color: yellow" ></label>
+
+    <script>
+        function ejecutar(){
+            let input = document.getElementById('inputTexto').value;
+            let mensaje = document.getElementById('idtexto')
+
+            if(input == ""){
+                mensaje.innerHTML = "Cargue algo por favor";
+                mensaje.style.display = 'block';
+                
+            } else {
+                alert(input);
+                console.log('texto cargado:', input);
+                document.getElementById('inputTexto').value = "";
+                mensaje.style.display = 'none';
+            }
+        }
+        
+    </script>
+</body>
+</html>
